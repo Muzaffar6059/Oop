@@ -1,1 +1,2 @@
-# char Array functions
+# C++ fundamentals and oop
+<ul> author:<i> Muzaffar Ali</i></ul>
