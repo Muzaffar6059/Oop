@@ -23,6 +23,24 @@ void SqrtMatrixTri1(int arr[][4], int row, int col) {
 void SqrtMatrixTri2(int arr[][4], int row, int col) {
     /*
     This function Print The Triangles form in the square matrix like
+        3           4
+      5 6         7 8
+    7 8 9    10 11 12
+          13 14 15 16
+    */
+    for (int i = row-1; i >=0; i--)
+    {
+        int a = row-1;
+        for (int j = 0; j <= i; j++)
+        {
+            cout << arr[i][a] << " ";
+            a--;
+        }
+    }
+}
+void SqrtMatrixTri3(int arr[][4], int row, int col) {
+    /*
+    This function Print The Triangles form in the square matrix like
     1       1
     4 5     5  6
     7 8 9   9  10 11
@@ -40,14 +58,14 @@ void SqrtMatrixTri2(int arr[][4], int row, int col) {
         cout << endl;
     }
 }
-void SqrtMatrixTri3(int arr[][4], int row, int col) {
+void SqrtMatrixTri4(int arr[][4], int row, int col) {
     /*
-    This function Print The Triangles form in the square matrix like
-    1       1
-    4 5     5  6
-    7 8 9   9  10 11
-            13 14 15 16
-*/
+    This function Print The value of Triangles form in the square matrix like
+    1 2 3      1 2 3 4
+      5 6        6 7 8 
+        9          9 10
+                     16
+    */
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < col; j++)
@@ -57,7 +75,6 @@ void SqrtMatrixTri3(int arr[][4], int row, int col) {
                 cout << arr[i][j] << " ";
             }
         }
-        cout << endl;
     }
 }
 
@@ -68,8 +85,9 @@ int main()
     int arr[row][col] = { { 1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16} };
 
     //SqrtMatrixTri1(arr, row, col);
-    //SqrtMatrixTri2(arr, row, col);
-    SqrtMatrixTri3(arr, row, col);
+    SqrtMatrixTri2(arr, row, col);
+    //SqrtMatrixTri3(arr, row, col);
+    //SqrtMatrixTri4(arr, row, col);
 
     return 0;
 }
