@@ -1,2 +1,2 @@
-# C++ fundamentals and oop
+# C++ fundamentals and Oop
 <ul> author:<i> Muzaffar Ali</i></ul>
