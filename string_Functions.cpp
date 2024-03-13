@@ -52,6 +52,8 @@ using namespace std;
 
 int deleteElementFromArray(int arr[], int size, int keyIndex){
     int j=0 ,i=0;
+    if(keyIndex >size ){
+        cout<< "Index is out of the range: " <<endl;
     for (; i < size; i++, j++)
     {
         if(i == keyIndex){

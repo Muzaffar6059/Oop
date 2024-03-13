@@ -30,11 +30,16 @@ void SqrtMatrixTri2(int arr[][4], int row, int col) {
     */
     for (int i = row-1; i >=0; i--)
     {
-        int a = row-1;
+        /*int a = row-1;
         for (int j = 0; j <= i; j++)
         {
             cout << arr[i][a] << " ";
             a--;
+        }*/
+        for (int j = 0; j <= row-i+1; j++)
+        {
+            cout << arr[i][j] << " ";
+            //a--;
         }
     }
 }
