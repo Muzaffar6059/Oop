@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-int* selectionSort(int arr[], int size) {
+void selectionSort(int arr[], int size) {
     for (int i = 0; i < size - 1; i++)
     {
         int minIndex = i;
         for (int j = i + 1; j < size; j++)
         {
-            if (arr[j] > arr[minIndex])
+            if (arr[j] < arr[minIndex])
             {
                 minIndex = j;
             }
@@ -17,7 +17,6 @@ int* selectionSort(int arr[], int size) {
         arr[minIndex] = arr[i];
         arr[i] = temp;
     }
-    return &arr[0];
 }
 
 int binarySearch(int arr[], int size, int target) {
@@ -58,11 +57,10 @@ int main()
     const int size = 6;
     int arr[size] = { 2,1,5,34,45,3 };
 
-  
-    int* ptr = selectionSort(arr, size);
+    selectionSort(arr, size);
     for (int i = 0; i < size; i++)
     {
-        cout << *(ptr+i) << " ";
+        cout << arr[i] << " ";
     }
 
     //int result = binarySearch(arr, size, 34);
