@@ -28,6 +28,14 @@ void insert(int arr[], int& size, int index) {
 	size++;
 }
 
+void deleteElement(int arr[], int& size, int index) {
+	for (int i = index; i < size; i++)
+	{
+		arr[i] = arr[i + 1];
+	}
+	size--;
+}
+
 int main() {
 	const int SIZE = 8;
 	int arr[SIZE];
@@ -44,7 +52,7 @@ int main() {
 
 	do
 	{
-		cout << "Enter index to insert the new Element in the range of 0-" << (count - 1) << ":" << endl;
+		cout << "Enter index of new inserting Element in range of 0-" << (count - 1) << ":" << endl;
 		cin >> index;
 	} while (index <0 ||index > count-1);
 
@@ -57,6 +65,15 @@ int main() {
 	{
 		cout << "The Array is Already Full: " << endl;
 	}
+
+	do
+	{
+		cout << "\nEnter the index of Deleting element 0-" << count - 1 << endl;
+		cin >> index;
+	} while (index<0 || index>count);
+
+	deleteElement(arr, count, index);
+	displayData(arr, count);
 
 
 	return  0;
