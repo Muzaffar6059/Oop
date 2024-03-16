@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="insert in the array.cpp">
+    <ClCompile Include="insert element in array.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
